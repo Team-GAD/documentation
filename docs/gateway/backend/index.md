@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Frontend
+title: Backend
 parent: Gateway
 nav_order: 1
 ---
 
-## Gateway Frontend
+## Gateway Backend
