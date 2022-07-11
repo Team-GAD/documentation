@@ -2,7 +2,7 @@
 layout: default
 title: Frontend
 parent: Cloud
-nav_order: 1
+nav_order: 2
 ---
 
 ## Cloud Frontend
