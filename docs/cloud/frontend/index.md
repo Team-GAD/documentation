@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Backend
-parent: Gateway
+title: Frontend
+parent: Cloud
 nav_order: 1
 ---
 
