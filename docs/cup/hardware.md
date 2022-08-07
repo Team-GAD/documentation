@@ -17,7 +17,7 @@ this must be changed accordingly in the software of the Cup.
 
 ![3D scetch of the cup](../../assets/images/wiring-plan.jpg)
 
-# Used components:
+## Used components:
 
 - **ESP32:**
 The central element of the system is the ESP32, 
@@ -62,4 +62,4 @@ the Step-Up module is used to supply the ESP properly.
 
 - **Resistors:**
 To find out how much the battery is still charged we measure its output current. If it is fully charged it has an output current of 4.2 V and if it is empty 3.2. 
-The resistors are used to measure this current with the ESP32. 
+The 10k Ohm resistors are used to measure this current with the ESP32. 
