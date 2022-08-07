@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Software
+title: 3D Prints
 parent: Cup
 nav_order: 2
 ---
 
-## Software
+## 3D Prints
