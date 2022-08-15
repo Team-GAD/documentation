@@ -7,7 +7,7 @@ nav_order: 1
 
 # Cloud Backend
 
-The backend of the cloud service provides several functions in Node js which are deployed on a firebase server allowing any customer or event organizer to access and upload data at any time via the API (https://europe-west1-cheers-soc.cloudfunctions.net/api). 
+The backend of the cloud service provides several functions in Node js which are deployed on a firebase server allowing any customer or event organizer to access and upload data at any time via the [API](https://europe-west1-cheers-soc.cloudfunctions.net/api). 
 ![functions](../../../assets/images/functions.png)
 The user authentication was tracked and secured with the Firebase Authentication functionality. 
 ![authentication](../../../assets/images/authentication.png)
@@ -15,7 +15,7 @@ The database and the triggers were handled using Cloud Firestore,
 ![firestore](../../../assets/images/firestore.png)
 and the images were saved in the Firebase Storage.
 ![storage](../../../assets/images/storage.png)
-By subscribing to the Firebase Blaze plan (https://firebase.google.com/pricing) it is possible to have several thousands of requests issued everyday and to integrate modules which need a lot of computational resources such as the face detection. 
+By subscribing to the [Firebase Blaze plan](https://firebase.google.com/pricing) it is possible to have several thousands of requests issued everyday and to integrate modules which need a lot of computational resources such as the face detection. 
 
 ## I- Gateway API endpoints: 
 ### 1- Sessions
