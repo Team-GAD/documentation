@@ -25,6 +25,6 @@ as well as the final documentation and all presentations and diagrams created du
 * [Final Presentation](presentations/Final_Demo.pdf)
 
 # Team
-* Daniel Mair - daniel.mair@tum.de
 * Gustav
 * Aziz - mazizs.marzouki@tum.de
+* Daniel Mair - daniel.mair@tum.de
