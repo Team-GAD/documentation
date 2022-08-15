@@ -18,7 +18,7 @@ and the images were saved in the Firebase Storage.
 By subscribing to the Firebase Blaze plan (https://firebase.google.com/pricing) it is possible to have several thousands of requests issued everyday and to integrate modules which need a lot of computational resources such as the face detection. 
 
 ## I- Gateway API endpoints: 
-  ### 1- Sessions
+### 1- Sessions
 - `POST /event/:eventId/open` 
       Creating or pulling a session for a user using the username and the eventId. The session consists of all the information The function is called when a user asks for a cup.
       
@@ -31,19 +31,19 @@ By subscribing to the Firebase Blaze plan (https://firebase.google.com/pricing) 
 - `GET /event/:eventId/user/:userHandle` 
       The gateway can request informations about the user for identity confirmation.
       
-  ### 2- Games
+### 2- Games
 - `POST /event/:eventId/game/players` 
     Used to fetch all the players of the GuessWho game which have not been set as a target yet.
 
 
 ## II- Frontend API endpoints: 
-  ### 1- Authentication
+### 1- Authentication
 - `POST /signup` 
     Used to sign up a user using the Firebase authentication functionality.
 - `POST /login` 
     Used to login a user by sending a bearer token after confirmation of the correct credentials.
     
-  ### 2- Users
+### 2- Users
 - `GET /user` 
       Returns all the events the details of the authenticated user.
 - `GET /users` 
@@ -55,7 +55,7 @@ By subscribing to the Firebase Blaze plan (https://firebase.google.com/pricing) 
 - `POST /user/image` 
       Update the profile picture of the authenticated user.
 
-  ### 3- Events
+### 3- Events
 - `GET /event/:eventId` 
   Return all the details about an event including the comments.
 - `GET /event/:eventId/like` 
