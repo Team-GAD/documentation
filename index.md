@@ -27,4 +27,4 @@ as well as the final documentation and all presentations and diagrams created du
 # Team
 * Daniel Mair - daniel.mair@tum.de
 * Gustav
-* Aziz 
+* Aziz - mazizs.marzouki@tum.de
