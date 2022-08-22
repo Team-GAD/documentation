@@ -43,7 +43,7 @@ Following api calls are required:
 ![static-profile](../../../assets/images/profile.png)
 The following page displays the information of a user that the authenticated user has cheered with.
 Following api calls are required:
-`GET /user/:handle`
+- `GET /user/:handle`
 ## Session Page
 The following page displays all the information collected during a session at an event.
 Following api calls are required:
@@ -52,7 +52,7 @@ Following api calls are required:
 ![cheers](../../../assets/images/session-cheers.png)
 The user sees the list of the persons he cheered with during the session. By clicking on the name, the user can access the profile of that person.
 Following api calls are required:
-`GET /user/:handle`
+- `GET /user/:handle`
 ### Orders
 ![orders](../../../assets/images/orders.png)
 The user has a list of all his orders during the session.
