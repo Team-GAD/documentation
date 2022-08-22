@@ -56,14 +56,14 @@ By subscribing to the [Firebase Blaze plan](https://firebase.google.com/pricing)
       Update the profile picture of the authenticated user.
 
 ### 3- Events
-- `GET /event/:eventId/like` 
-  Increment the number of likes of an event if not already liked by the authenticated user.
-- `GET /event/:eventId/unlike` 
-  decrement the number of likes of an event if already liked by the authenticated user.
 - `GET /session/:sessionId` 
   Return all the informations related to a session which the authenticated user was registered forincluding cheers, orders, bill, alcohol perentage, calories and score
 - `POST /game/blur` 
   Allows the authenticated user to take part in the Guess Who game by uploading an image. The function uses a face detection method and an image editing module to hide the identity of the players, which means that every player needs to provide a picture with a clearly visible face.
+- `GET /event/:eventId/like` 
+  Increment the number of likes of an event if not already liked by the authenticated user.
+- `GET /event/:eventId/unlike` 
+  decrement the number of likes of an event if already liked by the authenticated user.
 - `GET /event/:eventId` 
   Return all the details about an event including the comments.
 - `POST /event/:eventId/comment` 
