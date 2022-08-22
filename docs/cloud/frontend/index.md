@@ -7,7 +7,7 @@ nav_order: 2
 
 # Cloud Frontend
 
-The webpages is accessible [here](https://cheers-soc.web.app/).For it to work properly, the Firebase [API](https://europe-west1-cheers-soc.cloudfunctions.net/api) (See [Backend documentation](https://team-gad.github.io/documentation/docs/gateway/backend/)) needs to be properly deployed with correct database entries.
+The website is accessible [here](https://cheers-soc.web.app/).For it to work properly, the Firebase [API](https://europe-west1-cheers-soc.cloudfunctions.net/api) (See [Backend documentation](https://team-gad.github.io/documentation/docs/gateway/backend/)) needs to be properly deployed with correct database entries.
 ## Landing Page
 ![landing](../../../assets/images/landing-page.png)
 This page displays buttons to reach signup, login and documentation pages.
