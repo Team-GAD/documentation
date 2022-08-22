@@ -45,7 +45,7 @@ By subscribing to the [Firebase Blaze plan](https://firebase.google.com/pricing)
     
 ### 2- Users
 - `GET /user` 
-      Returns all the events the details of the authenticated user.
+      Returns all the details of the authenticated user.
 - `GET /users` 
       Returns a list of all the users which have cheered with the authenticated user.
 - `GET /user/:handle` 
@@ -56,19 +56,18 @@ By subscribing to the [Firebase Blaze plan](https://firebase.google.com/pricing)
       Update the profile picture of the authenticated user.
 
 ### 3- Events
-- `GET /event/:eventId` 
-  Return all the details about an event including the comments.
 - `GET /event/:eventId/like` 
   Increment the number of likes of an event if not already liked by the authenticated user.
 - `GET /event/:eventId/unlike` 
   decrement the number of likes of an event if already liked by the authenticated user.
-- `POST /event/:eventId/comment` 
-  An authenticated user can share a public comment with all the people which are taking part in it. 
 - `GET /session/:sessionId` 
   Return all the informations related to a session which the authenticated user was registered forincluding cheers, orders, bill, alcohol perentage, calories and score
 - `POST /game/blur` 
   Allows the authenticated user to take part in the Guess Who game by uploading an image. The function uses a face detection method and an image editing module to hide the identity of the players, which means that every player needs to provide a picture with a clearly visible face.
-  
+- `GET /event/:eventId` 
+  Return all the details about an event including the comments.
+- `POST /event/:eventId/comment` 
+  An authenticated user can share a public comment with all the people which are taking part in it. 
 ## III- Cloud Firestore triggers: 
 - `onEventImageChange`
   Triggers updates to all the references to the profile picture of a player in the database once it is modified.
