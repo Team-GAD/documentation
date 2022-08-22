@@ -30,7 +30,8 @@ By subscribing to the [Firebase Blaze plan](https://firebase.google.com/pricing)
       
 - `GET /event/:eventId/user/:userHandle` 
       The gateway can request informations about the user for identity confirmation.
-      
+- `POST /event` 
+      Create a new event.
 ### 2- Games
 - `POST /event/:eventId/game/players` 
     Used to fetch all the players of the GuessWho game which have not been set as a target yet.
@@ -64,8 +65,6 @@ By subscribing to the [Firebase Blaze plan](https://firebase.google.com/pricing)
   Increment the number of likes of an event if not already liked by the authenticated user.
 - `GET /event/:eventId/unlike` 
   Decrement the number of likes of an event if already liked by the authenticated user.
-  - `POST /event` 
-  Create a new event.
 - `GET /event/:eventId` 
   Return all the details about an event including the comments.
 - `POST /event/:eventId/comment` 
