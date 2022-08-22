@@ -34,7 +34,7 @@ Returns all cups
 - `GET /game/{id}`
 Returns the current game
 - `GET /next`
-Used for the GuessWho game to fetch a new guess while omitting the already displayed players from the [Cloud](https://github.com/Team-GAD/documentation/blob/main/docs/cloud/backend/#2--games).
+Used for the GuessWho game to fetch a new guess while omitting the already displayed players from the [Cloud](https://team-gad.github.io/documentation/docs/cloud/backend/#2--games).
 - `GET /winner`
 Used for the GuessWho game to get the winner
 - `GET /user/{cupId}/disconnect`
@@ -44,7 +44,7 @@ Performs a scan and then adds a drink to the scanned user
 - `GET /user/{userHandle}/check`
 Downloads user information from the [Cloud](https://team-gad.github.io/documentation/docs/cloud/backend/#1--sessions).
 - `GET /user/{userHandle}/cup/{cupId}/connect`
-Performs a scan and connects the user by creating/pulling a session in/from the [Cloud](https://github.com/Team-GAD/documentation/blob/main/docs/cloud/backend/index.md#1--sessions).
+Performs a scan and connects the user by creating/pulling a session in/from the [Cloud](https://team-gad.github.io/documentation/docs/cloud/backend/#1--sessions).
 - `GET /leaderboard`
 Returns the leaderboard of all games 
 
