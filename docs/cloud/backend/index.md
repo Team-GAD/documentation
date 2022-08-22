@@ -63,7 +63,9 @@ By subscribing to the [Firebase Blaze plan](https://firebase.google.com/pricing)
 - `GET /event/:eventId/like` 
   Increment the number of likes of an event if not already liked by the authenticated user.
 - `GET /event/:eventId/unlike` 
-  decrement the number of likes of an event if already liked by the authenticated user.
+  Decrement the number of likes of an event if already liked by the authenticated user.
+  - `POST /event` 
+  Create a new event.
 - `GET /event/:eventId` 
   Return all the details about an event including the comments.
 - `POST /event/:eventId/comment` 
