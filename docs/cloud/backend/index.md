@@ -20,54 +20,163 @@ By subscribing to the [Firebase Blaze plan](https://firebase.google.com/pricing)
 ## I- Gateway API endpoints: 
 ### 1- Sessions
 - `POST /event/:eventId/open` 
-      Creating or pulling a session for a user using the username and the eventId. The session consists of all the information The function is called when a user asks for a cup.
+```
+Body:
+{
+      "userHandle": String
+}
+```
+Creating or pulling a session for a user using the username and the eventId. The session consists of all the information The function is called when a user asks for a cup.
       
 - `POST /event/:eventId/update` 
-      Updating the cheers, orders, score, alcohol percentage, bill and calories of a user. This function is used by the bartender to update the user information while the cup is still used.
+```
+Body:
+{
+  "sessionId":String,
+  "cheers":[
+    {
+      "sessionIdOfCheer":String,
+      "time":[String]
+    }
+  ],
+  "orders":[
+    {
+      "order":String,
+      "time":[String]
+    }
+  ],
+  "promille":Double,
+  "score":String,
+  "rank":Int
+}
+```
+
+Updating the cheers, orders, score, alcohol percentage, bill and calories of a user. This function is used by the bartender to update the user information while the cup is still used.
       
-- `POST /event/:eventId/close` 
-      Closing the session and updating it.
+- `POST /event/:eventId/close`
+```
+Body:
+{
+  "sessionId":String,
+  "cheers":[
+    {
+      "sessionIdOfCheer":String,
+      "time":[String]
+    }
+  ],
+  "orders":[
+    {
+      "order":String,
+      "time":[String]
+    }
+  ],
+  "promille":Double,
+  "score":String,
+  "rank":Int
+}
+```
+Closing the session and updating it.
       
 - `GET /event/:eventId/user/:userHandle` 
       The gateway can request informations about the user for identity confirmation.
 - `POST /event` 
-      Create a new event.
+```
+Body:
+{
+  "eventName": String,
+  "description": String
+}
+```
+Create a new event.
+      
 ### 2- Games
 - `POST /event/:eventId/game/players` 
-    Used to fetch all the players of the GuessWho game which have not been set as a target yet.
+```
+Body:
+{
+  "donePlayers": [String]
+}
+```
+Used to fetch all the players of the GuessWho game which have not been set as a target yet.
 
 
 ## II- Frontend API endpoints: 
 ### 1- Authentication
 - `POST /signup` 
-    Used to sign up a user using the Firebase authentication functionality.
+```
+Body:
+{
+  "email": String,
+  "password": String
+}
+```
+Used to sign up a user using the Firebase authentication functionality.
 - `POST /login` 
-    Used to login a user by sending a bearer token after confirmation of the correct credentials.
+```
+Body:
+{
+  "email": String,
+  "password": String
+}
+```
+Used to login a user by sending a bearer token after confirmation of the correct credentials.
     
 ### 2- Users
-- `GET /user` 
+- `GET /user | Authentication: Bearer token` 
       Returns all the details of the authenticated user.
-- `GET /users` 
+- `GET /users | Authentication: Bearer token` 
       Returns a list of all the users which have cheered with the authenticated user.
 - `GET /user/:handle` 
       Returns the profile of a specific user.
 - `POST /user` 
-      Update the details of the authenticated user.
+```
+Body:
+{
+  "bio": String,
+  "facebook": String,
+  "instagram": String,
+  "phone": String,
+  "twitter": String,
+  "linkedin": String,
+  "location": String,
+  "website": String
+}
+Authentication: Bearer token
+```
+Update the details of the authenticated user.
 - `POST /user/image` 
-      Update the profile picture of the authenticated user.
+```
+Form:
+      image: png/jpg/jpeg
+Authentication: Bearer token
+```
+Update the profile picture of the authenticated user.
 
 ### 3- Events
-- `GET /session/:sessionId` 
+- `GET /session/:sessionId | Authentication: Bearer token`  
   Return all the informations related to a session which the authenticated user was registered forincluding cheers, orders, bill, alcohol perentage, calories and score
 - `POST /game/blur` 
-  Allows the authenticated user to take part in the Guess Who game by uploading an image. The function uses a face detection method and an image editing module to hide the identity of the players, which means that every player needs to provide a picture with a clearly visible face.
-- `GET /event/:eventId/like` 
+```
+Form:
+      image: png/jpg/jpeg
+      sessionId: String
+Authentication: Bearer token
+```
+Allows the authenticated user to take part in the Guess Who game by uploading an image. The function uses a face detection method and an image editing module to hide the identity of the players, which means that every player needs to provide a picture with a clearly visible face.
+- `GET /event/:eventId/like | Authentication: Bearer token` 
   Increment the number of likes of an event if not already liked by the authenticated user.
-- `GET /event/:eventId/unlike` 
+- `GET /event/:eventId/unlike | Authentication: Bearer token` 
   Decrement the number of likes of an event if already liked by the authenticated user.
-- `GET /event/:eventId` 
+- `GET /event/:eventId | Authentication: Bearer token` 
   Return all the details about an event including the comments.
-- `POST /event/:eventId/comment` 
+- `POST /event/:eventId/comment`
+```
+Body:
+{
+  "body": String,
+}
+Authentication: Bearer token
+``` 
   An authenticated user can share a public comment with all the people which are taking part in it. 
 ## III- Cloud Firestore triggers: 
 - `onEventImageChange`
