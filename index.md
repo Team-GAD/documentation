@@ -25,7 +25,7 @@ as well as the final documentation and all presentations and diagrams created du
 * [Final Presentation](presentations/Final_Demo.pdf)
 
 # Documentation
-* [Initial Project Plan](Project-Plan-Team-GAD.pdf)
+* [Initial Project Plan](Project Plan Team GAD.pdf)
 * [Final Documentation](Cheers-Documentation.pdf)
 
 # Team
