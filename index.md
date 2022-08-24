@@ -24,6 +24,10 @@ as well as the final documentation and all presentations and diagrams created du
 * [Demo 1](presentations/Demo_1.pdf)
 * [Final Presentation](presentations/Final_Demo.pdf)
 
+# Documentation
+* [Initial Project Plan](Project-Plan-Team-GAD.pdf)
+* [Final Documentation](Cheers-Documentation.pdf)
+
 # Team
 * Gustav
 * Aziz - mazizs.marzouki@tum.de
