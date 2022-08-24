@@ -107,7 +107,9 @@ Used to fetch all the players of the GuessWho game which have not been set as a 
 Body:
 {
   "email": String,
-  "password": String
+  "password": String,
+  "handle": String
+  
 }
 ```
 Used to sign up a user using the Firebase authentication functionality.
